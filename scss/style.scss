@@ -1,0 +1,71 @@
+$color-1: #262c27;
+$color-2: #b9c400;
+$color-3: #0093a1;
+@import url(https://fonts.googleapis.com/css?family=Inter:100,200,300,regular,500,600,700,800,900&display=swap);
+@import url(https://fonts.googleapis.com/css?family=Comfortaa:300,regular,500,600,700&display=swap);
+*,
+*::after,
+*::before {
+  box-sizing: border-box;
+}
+body {
+  // font-family: 'Comfortaa', cursive;
+  font-family: "Inter", sans-serif;
+  font-weight: 400;
+  font-size: 18px;
+  line-height: 22px;
+  color: $color-1;
+}
+a {
+  text-decoration: none; //убирает подчеркивание
+  color: inherit; //цвет наследуется у родителя
+}
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  margin: 0;
+}
+.container {
+  max-width: 1230px;
+  padding: 0px 15px; //верх/них 0, по бокам 15px
+  margin: 0 auto; //выравнивание контейнера по центру
+}
+.header {
+  background-image: url(../img/bg-image.jpg);
+  background-size: cover; //покрытие всей площади за контейнер
+  background-repeat: no-repeat; //без повторений
+  height: 100vh; //занимание всей высоты
+  &__top {
+    display: flex;
+    align-items: center;
+    padding: 57px 0;
+    gap: 100px;
+    justify-content: flex-end; //сдвиг блока в правую часть
+  }
+  &__btn {
+  }
+
+  &__phone {
+  }
+
+  &__content {
+  }
+
+  &__content-box {
+  }
+
+  &__title {
+  }
+
+  &__text {
+  }
+
+  &__decor-text {
+  }
+}
+
+.logo {
+}
