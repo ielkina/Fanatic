@@ -25,7 +25,8 @@ h2,
 h3,
 h4,
 h5,
-h6 {
+h6,
+p {
   margin: 0;
 }
 .container {
@@ -45,6 +46,35 @@ h6 {
   background-repeat: no-repeat; //без повторений
   min-height: 100vh; //занимание всей высоты
   background-position: center;
+  position: relative;
+  &::before {
+    content: "";
+    position: absolute;
+    background-image: url(../img/header-decore.svg);
+    bottom: 0;
+    left: 0;
+    right: 0;
+    height: 456px;
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    transform: translateY(35%);
+    z-index: 2;
+  }
+  &::after {
+    content: "";
+    position: absolute;
+    background-image: url(../img/header-decore.svg);
+    bottom: 0;
+    left: 0;
+    right: 0;
+    height: 456px;
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    transform: translateY(75%) rotate(180deg);
+    z-index: 3;
+  }
   &__top {
     display: flex;
     align-items: center;
@@ -75,6 +105,7 @@ h6 {
     display: flex;
     align-items: center;
     justify-content: flex-end;
+    position: relative;
   }
 
   &__content-box {
@@ -100,14 +131,38 @@ h6 {
   }
 
   &__decor-text {
-    // font-family: "Inter";
     color: #0093a1;
-    opacity: 0.3; //прозрачность
+    opacity: 0.8; //прозрачность
     position: absolute;
-    top: 0;
-    // font-style: italic;
-    // font-weight: 300;
-    // font-size: 32px;
-    // line-height: 39px;
+    bottom: 25px;
+  }
+  &__decor-text-1 {
+    z-index: 1;
+    right: 145px;
+    bottom: 150px;
+  }
+  &__decor-text-2 {
+    z-index: 4;
+    left: 265px;
+    bottom: 0;
+  }
+  &__decor-text-1,
+  &__decor-text-2 {
+    font-family: "Comfortaa", cursive;
+    font-size: 130px;
+    line-height: 145px;
+    opacity: 0.3;
+  }
+  &__decor-text-3 {
+    font-style: italic;
+    max-width: 360px;
+    right: 145px;
+    z-index: 4;
+    font-weight: 300;
+    font-size: 32px;
+    line-height: 39px;
+    text-align: center;
   }
 }
+
+@import "main";
