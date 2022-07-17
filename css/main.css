@@ -1,0 +1,27 @@
+.info {
+  background-image: url(../img/main-bg.jpg);
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+  position: relative;
+}
+.info::before {
+  content: "";
+  position: absolute;
+  height: 130px;
+  background-color: #262C27;
+  top: 0;
+  left: 0;
+  right: 0;
+  transform: translateY(-120px);
+  z-index: 1;
+}
+.info__top {
+  display: flex;
+  gap: 80px;
+}
+.info__top-text {
+  padding-top: 245px;
+  width: 290px;
+  color: #fff;
+}

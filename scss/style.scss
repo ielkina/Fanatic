@@ -3,11 +3,13 @@ $color-2: #b9c400;
 $color-3: #0093a1;
 @import url(https://fonts.googleapis.com/css?family=Inter:100,200,300,regular,500,600,700,800,900&display=swap);
 @import url(https://fonts.googleapis.com/css?family=Comfortaa:300,regular,500,600,700&display=swap);
+
 *,
 *::after,
 *::before {
   box-sizing: border-box;
 }
+
 body {
   // font-family: 'Comfortaa', cursive;
   font-family: "Inter", sans-serif;
@@ -16,10 +18,12 @@ body {
   line-height: 22px;
   color: $color-1;
 }
+
 a {
   text-decoration: none; //убирает подчеркивание
   color: inherit; //цвет наследуется у родителя
 }
+
 h1,
 h2,
 h3,
@@ -29,17 +33,26 @@ h6,
 p {
   margin: 0;
 }
+
+ul,
+li {
+  list-style-type: none;
+}
+
 .container {
   max-width: 1230px;
   padding: 0px 15px; //верх/низ 0, по бокам 15px
   margin: 0 auto; //выравнивание контейнера по центру
 }
+
 .logo path {
   transition: fill 0.3s ease;
+
   &:hover {
     fill: $color-3;
   }
 }
+
 .header {
   background-image: url(../img/bg-image.jpg);
   background-size: cover; //покрытие всей площади за контейнер
@@ -47,6 +60,8 @@ p {
   min-height: 100vh; //занимание всей высоты
   background-position: center;
   position: relative;
+  margin-bottom: 80px;
+
   &::before {
     content: "";
     position: absolute;
@@ -61,6 +76,7 @@ p {
     transform: translateY(35%);
     z-index: 2;
   }
+
   &::after {
     content: "";
     position: absolute;
@@ -75,6 +91,7 @@ p {
     transform: translateY(75%) rotate(180deg);
     z-index: 3;
   }
+
   &__top {
     display: flex;
     align-items: center;
@@ -86,6 +103,7 @@ p {
     font-size: 20px;
     line-height: 22px;
   }
+
   &__btn {
     text-transform: uppercase;
     color: #fff;
@@ -94,6 +112,7 @@ p {
     border: none;
     cursor: pointer;
     border-radius: 2px;
+
     &:hover {
       background-color: $color-3;
       transition: 0.6s ease; //плавное смена цвета при наведении
@@ -136,16 +155,19 @@ p {
     position: absolute;
     bottom: 25px;
   }
+
   &__decor-text-1 {
     z-index: 1;
     right: 145px;
     bottom: 150px;
   }
+
   &__decor-text-2 {
     z-index: 4;
     left: 265px;
     bottom: 0;
   }
+
   &__decor-text-1,
   &__decor-text-2 {
     font-family: "Comfortaa", cursive;
@@ -153,6 +175,7 @@ p {
     line-height: 145px;
     opacity: 0.3;
   }
+
   &__decor-text-3 {
     font-style: italic;
     max-width: 360px;
@@ -165,4 +188,4 @@ p {
   }
 }
 
-@import "main";
+@import "main.scss";

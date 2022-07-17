@@ -29,6 +29,11 @@ p {
   margin: 0;
 }
 
+ul,
+li {
+  list-style-type: none;
+}
+
 .container {
   max-width: 1230px;
   padding: 0px 15px;
@@ -49,6 +54,7 @@ p {
   min-height: 100vh;
   background-position: center;
   position: relative;
+  margin-bottom: 80px;
 }
 .header::before {
   content: "";
@@ -159,4 +165,32 @@ p {
   font-size: 32px;
   line-height: 39px;
   text-align: center;
+}
+
+.info {
+  background-image: url(../img/main-bg.jpg);
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+  position: relative;
+}
+.info::before {
+  content: "";
+  position: absolute;
+  height: 130px;
+  background-color: #262C27;
+  top: 0;
+  left: 0;
+  right: 0;
+  transform: translateY(-120px);
+  z-index: 1;
+}
+.info__top {
+  display: flex;
+  gap: 80px;
+}
+.info__top-text {
+  padding-top: 245px;
+  width: 290px;
+  color: #fff;
 }

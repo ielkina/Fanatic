@@ -1,16 +1,57 @@
 .main {}
+
 .container {}
+
 .popup-btn {}
+
 .info {
-    &__inner {}
-    &__top {}
-    &__top-text {}
-    &__btn {}
-    &__top-img {}
-    &__specs {}
-    &__specs-title {}
-    &__specs-list {}
-    &__specs-item {}
-    &__specs-caption {}
-    &__specs-text {}
+  background-image: url(../img/main-bg.jpg);
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+  position: relative;
+
+  // margin-top: 90px;
+  &::before {
+    content: "";
+    position: absolute;
+    height: 130px;
+    background-color: #262C27;
+    top: 0;
+    left: 0;
+    right: 0;
+    transform: translateY(-120px);
+    z-index: 1;
+  }
+
+
+  &__inner {}
+
+  &__top {
+    display: flex;
+    gap: 80px;
+  }
+
+  &__top-text {
+    padding-top: 245px;
+    width: 290px;
+    color: #fff;
+    
+  }
+
+  &__btn {}
+
+  &__top-img {}
+
+  &__specs {}
+
+  &__specs-title {}
+
+  &__specs-list {}
+
+  &__specs-item {}
+
+  &__specs-caption {}
+
+  &__specs-text {}
 }
